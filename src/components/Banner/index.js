@@ -1,16 +1,23 @@
 import React from "react";
 
-const Banner = (props) => {
+const Banner = ({ bgImg, infoText, isButton }) => {
   return (
-    <div className={props.bgImg}>
+    <div className={bgImg}>
       <div className="container">
         <div className="row">
-          <div className="custom-banner d-flex flex-column justify-content-center mt-3">
-            <h1 className="heading-banner">
-              We Reward You For Every Transaction{" "}
-            </h1>
-            <button className="knowmore-btn">Know More</button>
-          </div>
+          {infoText && (
+            <div className="custom-banner d-flex flex-column justify-content-center mt-3">
+              <h1 className="heading-banner">{infoText + " "}</h1>
+              {isButton && (
+                <button
+                  style={{ width: "15%", padding: "10px 27px" }}
+                  className="action-btn"
+                >
+                  Know More
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>

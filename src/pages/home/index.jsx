@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import Services from "../../components/Services";
 import { NavLink } from "react-router-dom";
 import Banner from "../../components/Banner";
@@ -7,7 +6,11 @@ import Banner from "../../components/Banner";
 const Home = () => {
   return (
     <>
-      <Banner bgImg={"bg-img"} />
+      <Banner
+        bgImg={"bg-img"}
+        infoText={"We Reward You For Every Transaction"}
+        isButton={true}
+      />
       <div className="py-md-5">
         <div className="container py-5">
           <div className="row">
@@ -44,7 +47,7 @@ const Home = () => {
                   img={
                     "https://idyllic-donut-936500.netlify.app/static/media/vouchers-img.2bc257f4a6efe384dbd4.png"
                   }
-                  path={"#0"}
+                  path={"/vouchers"}
                 />{" "}
                 <Services
                   name={"Air Time"}

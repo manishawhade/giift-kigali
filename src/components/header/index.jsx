@@ -2,7 +2,6 @@ import React,{ useState } from "react";
 import {  useNavigate ,NavLink} from "react-router-dom";
 import bklogo from "../../asset/images/BK - Logo.png";
 import Ikirenga from "../../asset/images/Ikirenga.png";
-import "./index.css";
 const Header = () => {
   let navigate = useNavigate();
   const loggedInUser = () => {

@@ -6,7 +6,10 @@ import "./index.css";
 const Flight = () => {
   return (
     <>
-      <Banner bgImg={"bg-flight"} />
+      <Banner
+        bgImg={"bg-flight"}
+        infoText={"Booking the perfect flight is just a click away."}
+      />
       <div className="container my-5">
         <form action="">
           <div className="form p-4">

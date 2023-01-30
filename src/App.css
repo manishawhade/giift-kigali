@@ -1,0 +1,173 @@
+.bg-img {
+  background: url("asset/images/home-banner.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 92vh;
+}
+.heading-banner {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 71px;
+  color: #ffffff;
+}
+.custom-banner {
+  height: 85vh;
+}
+.action-btn {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background: #0c4da2;
+}
+.sec-section-heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  color: #171a50;
+}
+.text-center {
+  text-align: center !important;
+}
+.category-img {
+  padding-bottom: 2rem;
+}
+.hovv {
+  height: 236.84px;
+  object-fit: cover;
+  object-position: top;
+}
+.img-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #003262;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 5rem;
+  pointer-events: none;
+}
+.img-desc {
+  display: none;
+  pointer-events: none;
+}
+.sec-section-text {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.phovv {
+  position: relative;
+}
+
+.nav-bar {
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+}
+.nav-link {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #003262 !important;
+}
+.border-right-pipe {
+  border-right: 2px solid #707070;
+}
+.header-color {
+  color: #003262 !important;
+}
+.header2 {
+  background: #0c4da2;
+}
+.logout-btn,
+.login-btn {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px 27px;
+  background: transparent;
+}
+
+.ftr-bg {
+  padding: 2%;
+  border-top: 2px solid #2a6ebb;
+  clear: both;
+  background: #003262;
+}
+.row.footRow {
+  display: block;
+  overflow: hidden;
+}
+.divRgt {
+  float: right;
+}
+.social-icons {
+  text-align: right;
+}
+.list-unstyled1 {
+  padding-left: 0;
+  list-style: none;
+}
+.nav-link1 {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff !important;
+  margin-right: 1rem !important;
+  text-decoration: none;
+}
+.copyright {
+  padding-top: 20px;
+  width: 100%;
+}
+.text-muted {
+  color: #6c757d !important;
+}
+.text-footer {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.poweredby-txt {
+  color: #ffffff;
+}
+.footers-logo {
+  text-align: right;
+}
+
+/* Voucher page start */
+
+.bg-voucher {
+  background: url("asset/images/voucher-banner.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 92vh;
+}
+
+/* Voucher page end */

@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import twitter from "../../asset/images/Twitter.png";
 import facebook from "../../asset/images/Facebook.png";
 import instagram from "../../asset/images/Instagram.png";
@@ -31,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-md-9 col-sm-6 divLft py-4 py-md-0">
-            <ul className="list-unstyled1 nav-bar1">
+            <ul className="list-unstyled1 nav-bar">
               <li>
                 <a className="nav-link1" href="#0">
                   About Us
