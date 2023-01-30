@@ -3,6 +3,7 @@ import Services from "../../components/Services";
 import { NavLink } from "react-router-dom";
 import Banner from "../../components/Banner";
 import { useTranslation } from "react-i18next";
+import homeVoucherImage from "../../asset/images/home-voucher.png"
 
 const Home = () => {
   const { t } = useTranslation();
@@ -46,9 +47,7 @@ const Home = () => {
                 />{" "}
                 <Services
                   name={"Vouchers"}
-                  img={
-                    "https://idyllic-donut-936500.netlify.app/static/media/vouchers-img.2bc257f4a6efe384dbd4.png"
-                  }
+                  img={homeVoucherImage}
                   path={"/vouchers"}
                 />{" "}
                 <Services
