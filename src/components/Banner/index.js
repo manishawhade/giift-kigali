@@ -7,7 +7,7 @@ const Banner = ({ bgImg, infoText, isButton }) => {
         <div className="row">
           {infoText && (
             <div className="custom-banner d-flex flex-column justify-content-center mt-3">
-              <h1 className="heading-banner">{infoText + " "}</h1>
+              <h1 className="heading-banner col-md-8" style={isButton ? {color:"#ffffff"} : {color:"#003262"}}>{infoText + " "}</h1>
               {isButton && (
                 <button
                   style={{ width: "15%", padding: "10px 27px" }}

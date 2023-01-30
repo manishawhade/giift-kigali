@@ -2,8 +2,10 @@ import React from "react";
 import Services from "../../components/Services";
 import { NavLink } from "react-router-dom";
 import Banner from "../../components/Banner";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Banner

@@ -68,35 +68,50 @@ const VOUCHERLIST = [
     image: voucher2,
   },
 ];
+
+const VoucherItem = ({ item }) => (
+  <div key={item.id} className="col-sm-3 text-center my-3">
+    <div className="card">
+      <img src={item.image} alt="Voucher logo" />
+      <b>{item.Name}</b>
+      <p>{item.Description}</p>
+      <b>{item.Points}</b>
+      <p>Ikirenga Points</p>
+      <button className="action-btn mx-5 mb-3 p-2">Redeem</button>
+    </div>
+  </div>
+);
+
 const Vouchers = () => {
   return (
     <>
-      <Banner bgImg={"bg-voucher"} />
+      <Banner
+        bgImg={"bg-voucher"}
+        infoText={"Wonderful gift vouchers for every occasion"}
+      />
       <div className="py-md-5">
         <div className="container py-5">
           <div className="row">
             <h2 className="sec-section-heading text-center">Vouchers</h2>
-            <div>
-              
+            <div className="mx-auto row w-75 mt-3">
+              <div className="d-flex flex-column col-6">
+                <label className="form-label">Select Category</label>
+                <select name="" id="" className="form-select">
+                  <option value="">Category 1</option>
+                  <option value="">Category 1</option>
+                  <option value="">Category 1</option>
+                </select>
+              </div>
+              <div className="d-flex flex-column col-6">
+                <label className="form-label">Select By Brands</label>
+                <input type="search" className="form-control" />
+              </div>
             </div>
             <div className="mt-4">
               <div className="container-fluid">
                 <div className="row">
                   {VOUCHERLIST &&
-                    VOUCHERLIST.map((item) => (
-                      <div key={item.id} className="col-sm-3 text-center my-3">
-                        <div className="card">
-                          <img src={item.image} alt="Voucher logo" />
-                          <b>{item.Name}</b>
-                          <p>{item.Description}</p>
-                          <b>{item.Points}</b>
-                          <p>Ikirenga Points</p>
-                          <button className="action-btn mx-5 mb-3 p-2">
-                            Redeem
-                          </button>
-                        </div>
-                      </div>
-                    ))}
+                    VOUCHERLIST.map((item) => <VoucherItem item={item} />)}
                 </div>
               </div>
             </div>

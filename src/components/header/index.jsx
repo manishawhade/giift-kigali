@@ -1,8 +1,17 @@
-import React,{ useState } from "react";
-import {  useNavigate ,NavLink} from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, NavLink } from "react-router-dom";
 import bklogo from "../../asset/images/BK - Logo.png";
 import Ikirenga from "../../asset/images/Ikirenga.png";
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+
+  function changeLanguage(e) {
+    // i18n.changeLanguage(e.target.value);
+  }
+
   let navigate = useNavigate();
   const loggedInUser = () => {
     return false;
@@ -14,34 +23,45 @@ const Header = () => {
         <ul className="col-6 nav-bar m-0">
           <li>
             <NavLink className="nav-link" to={"/about"}>
-              About Us
+              {t('navigation-about-us')}
             </NavLink>
           </li>
           <li>
             <a className="nav-link" href="#0">
-              Earn
+            {t('navigation-earn')}
             </a>
           </li>
           <li>
             <a className="nav-link" href="#0">
-              Redeem
+            {t('navigation-redeem')}
             </a>
           </li>
           <li>
             <a className="nav-link" href="#0">
-              My Account
+            {t('navigation-my-account')}
             </a>
           </li>
         </ul>
-        <div className="col-6 text-end py-1 header-color">
-          <span className="border-right-pipe px-3">Welcome Mr Chidi Mbulu</span>
-          <span className="border-right-pipe px-3">Points 65,708</span>
-          <span className="px-3">En</span>
+        <div className="col-6 text-end py-1 header-color d-flex justify-content-end">
+          <p className="border-right-pipe px-3">{t('navigation-welcome')} Mr Chidi Mbulu</p>
+          <p className="border-right-pipe px-3">{t("navigation-points")} 65,708</p>
+          <p className="px-3">
+            <select
+              name=""
+              id=""
+              className="border-0"
+              onChange={changeLanguage}
+            >
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="rw">RW</option>
+            </select>
+          </p>
         </div>
       </div>
       <div className="header2">
         <div className="d-flex container">
-          <NavLink className="p-1 col-6" to={"/"}>
+          <NavLink className="pt-2 col-6" to={"/"}>
             <img className="mx-4" src={bklogo} alt="" />
             <img src={Ikirenga} alt="" />
           </NavLink>
@@ -51,14 +71,14 @@ const Header = () => {
                 className="my-3 logout-btn"
                 onClick={() => setIsLoggedIn(false)}
               >
-                Logout
+                {t('navigation-logout')}
               </button>
             ) : (
               <button
                 onClick={() => setIsLoggedIn(true)}
                 className="my-3 login-btn"
               >
-                Login
+                {t('navigation-login')}
               </button>
             )}
           </div>
