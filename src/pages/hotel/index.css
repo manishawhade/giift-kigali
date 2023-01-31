@@ -1,5 +1,5 @@
-.bg-flight{
-    background: url("../../asset/images/flight.png");
+.bg-hotel{
+    background: url("../../asset/images/hotel.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,12 +23,7 @@ ul li{
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #0C4DA2;
 }
-.active .text{
-    color: #FFFFFF;
-}
-
 .travel-icon{
     padding: 0 0 0 10px;
 }
@@ -39,6 +34,9 @@ ul li{
     border: 1px solid #0C4DA2;
     border-bottom: 0px;
 }
-.icnHotel{
+.icnFlight{
     text-decoration: none;
+}
+.travel-icon{
+    height: 30px;
 }

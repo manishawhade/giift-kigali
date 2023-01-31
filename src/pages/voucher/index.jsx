@@ -2,7 +2,9 @@ import React from "react";
 import Banner from "../../components/Banner";
 import voucher1 from "../../asset/images/voucher1.png";
 import voucher2 from "../../asset/images/voucher2.png";
-
+import { useState, useEffect } from "react";
+import Shimmer from "../../components/Shimmer";
+import { Skeleton } from "@mui/material";
 const VOUCHERLIST = [
   {
     id: 1,
@@ -83,7 +85,14 @@ const VoucherItem = ({ item }) => (
 );
 
 const Vouchers = () => {
-  return (
+  const [showComponent, setShowComponent] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowComponent(true);
+    }, 2000);
+  }, []);
+
+  return showComponent ? (
     <>
       <Banner
         bgImg={"bg-voucher"}
@@ -121,6 +130,8 @@ const Vouchers = () => {
         </div>
       </div>
     </>
+  ) : (
+    <Skeleton variant="rectangular" width={210} height={118} />
   );
 };
 

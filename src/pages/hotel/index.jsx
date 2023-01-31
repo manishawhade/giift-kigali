@@ -5,18 +5,17 @@ import "./index.css";
 import { useFormik } from "formik";
 import { Schema } from "../../Schema";
 import { Formik } from "formik";
-import white from "../../asset/images/flight_white.png";
-import blue from "../../asset/images/flight-blue.png";
+import white from "../../asset/images/hotel-white.png";
+import blue from "../../asset/images/hotel-blue.png";
 import { Link } from "react-router-dom";
-const Flight = () => {
+const Hotel = () => {
   const { values, handleBlur, touched, handleChange, handleSubmit, errors } =
     useFormik({
       initialValues: {
-        from: "",
-        to: "",
-        Departure: "",
-        Return: "",
-        Preference: "",
+        City: "",
+        CheckIn: "",
+        CheckOut: "",
+        Rooms: "",
         Adult: "",
         child: "",
       },
@@ -25,155 +24,98 @@ const Flight = () => {
         console.log(values);
       },
     });
-  console.log(values);
+
   return (
     <>
-      <Banner bgImg={"bg-flight"} />
+      <Banner bgImg={"bg-hotel"} />
       <div className="container my-5">
-        <h2 className="sec-section-heading text-center pb-4">Book A Flight</h2>
+        <h2 className="sec-section-heading text-center pb-4">Book A Hotel</h2>
         <div className="tab_box">
           <ul className="p-0 d-flex m-0">
             <li>
               <Link
                 to="/flight"
-                className="active d-flex align-items-center icnFlight px-4 py-2"
+                className="d-flex align-items-center icnFlight px-4 py-2"
               >
                 <p className="m-0 text">Flights</p>
-                <img className="travel-icon" src={white} />
+                <img className="travel-icon" src={blue} />
               </Link>
             </li>
             <li>
               <Link
                 to="/hotel"
-                className="icnHotel d-flex align-items-center px-4 py-2"
+                className="active d-flex align-items-center icnFlight px-4 py-2"
               >
-                <p className="m-0 text">Hotels</p>
-                <img className="travel-icon" src={blue} />
+                <p className="m-0 text">Hotel</p>
+                <img className="travel-icon" src={white} />
               </Link>
             </li>
           </ul>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form p-4">
-            <div className="d-flex">
-              <div className="form-check ">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                />
-                <label className="form-check-label" htmlFor="flexRadioDefault1">
-                  One way
-                </label>
-              </div>
-              <div className="form-check mx-4">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
-                />
-
-                <label className="form-check-label" htmlFor="flexRadioDefault2">
-                  Return
-                </label>
-              </div>
-            </div>
-
             <div className="row mb-md-3">
               <div className="row py-3">
                 <div className="col-md-3">
-                  <label htmlFor="from">From</label>
+                  <label htmlFor="City">City</label>
                   <input
                     type="text"
                     className="form-control"
                     placeholder="First name"
                     aria-label="First name"
-                    name="from"
-                    id="from"
-                    value={values.from}
+                    name="City"
+                    id="City"
+                    value={values.City}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
                 </div>
                 <div className="col-md-3">
-                  <label htmlFor="to">To</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Last name"
-                    aria-label="Last name"
-                    name="to"
-                    id="to"
-                    value={values.to}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  />
-                </div>
-                <div className="col-md-3">
-                  <label htmlFor="Departure">Departure</label>
+                  <label htmlFor="CheckIn">Check-In</label>
                   <input
                     type="date"
                     className="form-control"
-                    placeholder="Departure"
+                    placeholder="CheckIn"
                     aria-label="First name"
-                    name="Departure"
-                    id="Departure"
-                    value={values.Departure}
+                    name="CheckIn"
+                    id="CheckIn"
+                    value={values.CheckIn}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
                 </div>
                 <div className="col-md-3">
-                  <label htmlFor="Return">Return</label>
+                  <label htmlFor="CheckOut">Check-Out</label>
                   <input
                     type="date"
                     className="form-control"
-                    placeholder="Last name"
+                    placeholder="CheckOut"
                     aria-label="Last name"
-                    name="Return"
-                    id="Return"
-                    value={values.Return}
+                    name="CheckOut"
+                    id="CheckOut"
+                    value={values.CheckOut}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
+                </div>
+                <div class="col-md-3">
+                  <label htmlFor="Rooms">Rooms</label>
+                  <select
+                    className="form-select"
+                    id="Rooms"
+                    name="Rooms"
+                    value={values.Rooms}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  >
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-3">
-                  <label htmlFor="Class">Class</label>
-                  <select
-                    className="form-select"
-                    id="Class"
-                    name="Class"
-                    value={values.Class}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  >
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="col-md-3">
-                  <label htmlFor="Preference">Preference</label>
-                  <select
-                    className="form-select"
-                    id="Preference"
-                    name="Preference"
-                    value={values.Preference}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  >
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
                 <div class="col-md-3">
                   <label htmlFor="Adult">Adult</label>
                   <select
@@ -242,4 +184,4 @@ const Flight = () => {
   );
 };
 
-export default Flight;
+export default Hotel;

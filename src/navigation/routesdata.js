@@ -2,6 +2,7 @@ import Home from "../pages/home";
 import Flight from "../pages/flight";
 import ErrorPage from "./errorpage";
 import Vouchers from "../pages/voucher";
+import Hotel from "../pages/hotel";
 
 const ROUTESDATA = [
   {
@@ -16,6 +17,11 @@ const ROUTESDATA = [
   {
     path: "/flight",
     element: <Flight />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/hotel",
+    element: <Hotel />,
     errorElement: <ErrorPage />,
   },
   {
