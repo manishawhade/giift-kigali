@@ -1,21 +1,30 @@
-import React, { useState } from "react";
-import { useNavigate, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import bklogo from "../../asset/images/BK - Logo.png";
 import Ikirenga from "../../asset/images/Ikirenga.png";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const [selectedLanguage, setselectedLanguage] = useState("en");
   const { i18n } = useTranslation();
   const { t } = useTranslation();
 
+  useEffect(() => {
+    var lang = localStorage.getItem("lang");
+    if (lang) {
+      i18n.changeLanguage(lang);
+      setselectedLanguage(lang);
+    } else {
+      setselectedLanguage("en");
+    }
+  }, []);
+
   function changeLanguage(e) {
-    // i18n.changeLanguage(e.target.value);
+    i18n.changeLanguage(e.target.value);
+    localStorage.setItem("lang", e.target.value);
+    setselectedLanguage(e.target.value);
   }
 
-  let navigate = useNavigate();
-  const loggedInUser = () => {
-    return false;
-  };
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
@@ -23,34 +32,37 @@ const Header = () => {
         <ul className="col-6 nav-bar m-0">
           <li>
             <NavLink className="nav-link" to={"/about"}>
-              {t('navigation-about-us')}
+              {t("navigation-about-us")}
             </NavLink>
           </li>
           <li>
             <a className="nav-link" href="#0">
-            {t('navigation-earn')}
+              {t("navigation-earn")}
             </a>
           </li>
           <li>
             <a className="nav-link" href="#0">
-            {t('navigation-redeem')}
+              {t("navigation-redeem")}
             </a>
           </li>
           <li>
             <a className="nav-link" href="#0">
-            {t('navigation-my-account')}
+              {t("navigation-my-account")}
             </a>
           </li>
         </ul>
         <div className="col-6 text-end py-1 header-color d-flex justify-content-end">
-          <p className="border-right-pipe px-3">{t('navigation-welcome')} Mr Chidi Mbulu</p>
-          <p className="border-right-pipe px-3">{t("navigation-points")} 65,708</p>
+          <p className="border-right-pipe px-3">
+            {t("navigation-welcome")} Mr Chidi Mbulu
+          </p>
+          <p className="border-right-pipe px-3">
+            {t("navigation-points")} 65,708
+          </p>
           <p className="px-3">
             <select
-              name=""
-              id=""
               className="border-0"
               onChange={changeLanguage}
+              value={selectedLanguage}
             >
               <option value="en">EN</option>
               <option value="fr">FR</option>
@@ -71,14 +83,14 @@ const Header = () => {
                 className="my-3 logout-btn"
                 onClick={() => setIsLoggedIn(false)}
               >
-                {t('navigation-logout')}
+                {t("navigation-logout")}
               </button>
             ) : (
               <button
                 onClick={() => setIsLoggedIn(true)}
                 className="my-3 login-btn"
               >
-                {t('navigation-login')}
+                {t("navigation-login")}
               </button>
             )}
           </div>

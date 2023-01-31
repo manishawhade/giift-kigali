@@ -70,7 +70,7 @@ const VOUCHERLIST = [
 ];
 
 const VoucherItem = ({ item }) => (
-  <div key={item.id} className="col-sm-3 text-center my-3">
+  <div className="col-sm-3 text-center my-3">
     <div className="card">
       <img src={item.image} alt="Voucher logo" />
       <b>{item.Name}</b>
@@ -111,7 +111,9 @@ const Vouchers = () => {
               <div className="container-fluid">
                 <div className="row">
                   {VOUCHERLIST &&
-                    VOUCHERLIST.map((item) => <VoucherItem item={item} />)}
+                    VOUCHERLIST.map((item) => (
+                      <VoucherItem key={item.id} item={item} />
+                    ))}
                 </div>
               </div>
             </div>
