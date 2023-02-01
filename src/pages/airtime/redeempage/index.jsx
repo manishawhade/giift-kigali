@@ -9,7 +9,7 @@ const RedeemPage = () => {
   const navigte = useNavigate();
 
   return (
-    <div className="container d-flex">
+    <div className="container d-flex mb-4 mt-4">
       <div className="col-md-4 d-flex h-100 justify-content-center">
         <div className="card">
           {item && <img src={item.image} alt="logo" />}
