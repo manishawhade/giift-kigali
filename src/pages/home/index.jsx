@@ -55,7 +55,7 @@ const Home = () => {
                   img={
                     "https://shopgateway.giift.com:8443/assets/catalog/505b3/b46a7/Airtime.jpg"
                   }
-                  path={"#0"}
+                  path={"/airtime"}
                 />
                 <div className="col-12 category-img">
                   <NavLink to={"#0"}>
