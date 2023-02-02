@@ -183,3 +183,26 @@
 }
 
 /* Airtime page end */
+
+/* Shop page start */
+
+.bg-shop {
+  background: url("https://shopgateway.giift.com:8443/assets/catalog/505b3/61703/BOK%20shop.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 92vh;
+}
+
+#category .category-item {
+  display: none;
+  background-color: aqua;
+  position: absolute;
+  
+}
+#category #category-item-label li:hover .category-item {
+  display: block;
+  background-color: red;
+}
+
+/* Shop page end */

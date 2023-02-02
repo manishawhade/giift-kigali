@@ -5,6 +5,7 @@ import Vouchers from "../pages/voucher";
 import Hotel from "../pages/hotel";
 import AirTime from "../pages/airtime";
 import RedeemPage from "../pages/airtime/redeempage";
+import Shop from "../pages/shop";
 
 const ROUTESDATA = [
   {
@@ -39,6 +40,11 @@ const ROUTESDATA = [
   {
     path: "/airtime/:id",
     element: <RedeemPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/shop",
+    element: <Shop />,
     errorElement: <ErrorPage />,
   },
 ];

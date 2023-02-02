@@ -58,7 +58,7 @@ const Home = () => {
                   path={"/airtime"}
                 />
                 <div className="col-12 category-img">
-                  <NavLink to={"#0"}>
+                  <NavLink to={"/shop"}>
                     <div className="phovv">
                       <img
                         className="w-100 hovv"
