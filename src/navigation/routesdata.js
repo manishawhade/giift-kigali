@@ -6,6 +6,8 @@ import Hotel from "../pages/hotel";
 import AirTime from "../pages/airtime";
 import RedeemPage from "../pages/airtime/redeempage";
 import Shop from "../pages/shop";
+import Login from "../pages/login";
+import FlightResult from "../pages/flightResult";
 
 const ROUTESDATA = [
   {
@@ -28,8 +30,18 @@ const ROUTESDATA = [
     errorElement: <ErrorPage />,
   },
   {
+    path: "/login",
+    element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/vouchers",
     element: <Vouchers />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/flightResult",
+    element: <FlightResult />,
     errorElement: <ErrorPage />,
   },
   {

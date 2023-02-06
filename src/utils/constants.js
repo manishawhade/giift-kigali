@@ -1,4 +1,4 @@
-const FLIGHTSEARCHLIST = [
+export const FLIGHTSEARCHLIST = [
   {
     id: 1,
     fromBoardingDate: "06-02-2023",
@@ -37,9 +37,28 @@ const FLIGHTSEARCHLIST = [
     fromArrivalDate: "22-02-2023",
     fromArrivalTime: "6:15 PM",
   },
+  {
+    id: 3,
+    fromBoardingDate: "06-02-2023",
+    fromBoardingTime: "7:15 PM",
+    fromBoardingLocation: "Kenya",
+    fromDurationType: "Non Stop",
+    fromDurationTime: "3 hrs 10 mins",
+    fromArrivalLocation: "Mumbai BOM",
+    fromArrivalDate: "06-02-2023",
+    fromArrivalTime: "11:55 PM",
+    fromBoardingDate: "22-02-2023",
+    fromBoardingTime: "4:25 PM",
+    fromBoardingLocation: "Mumbai BOM",
+    fromDurationType: "Non Stop",
+    fromDurationTime: "3 hrs 10 mins",
+    fromArrivalLocation: "Kenya",
+    fromArrivalDate: "22-02-2023",
+    fromArrivalTime: "6:15 PM",
+  },
 ];
 
-const AIRLINELIST = [
+export const AIRLINELIST = [
   {
     id: 1,
     name: "Indigo",

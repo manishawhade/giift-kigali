@@ -206,3 +206,22 @@
 }
 
 /* Shop page end */
+.border-color{
+  border: 1px solid #EEF2F6;
+}
+.text{
+  font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+color: #242424;
+display: flex;
+align-items: center;
+}
+.point{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color: #242424;
+}

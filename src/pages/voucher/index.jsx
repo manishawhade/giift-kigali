@@ -4,7 +4,7 @@ import voucher1 from "../../asset/images/voucher1.png";
 import voucher2 from "../../asset/images/voucher2.png";
 import { useState, useEffect } from "react";
 import Shimmer from "../../components/Shimmer";
-import { Skeleton } from "@mui/material";
+
 const ITEMLIST = [
   {
     id: 1,
@@ -123,7 +123,13 @@ const Vouchers = () => {
       </div>
     </>
   ) : (
-    <Skeleton variant="rectangular" width={210} height={118} />
+    <div className="d-flex flex-wrap p-2 m-3 justify-content-between">
+      {Array(49)
+        .fill()
+        .map((item, index) => (
+          <Shimmer key={index} />
+        ))}
+    </div>
   );
 };
 
