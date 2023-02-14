@@ -43,7 +43,7 @@ const Home = () => {
                   img={
                     "https://shopgateway.giift.com:8443/assets/catalog/505b3/f6449/Hotel.jpg"
                   }
-                  path={"#0"}
+                  path={"/hotel"}
                 />{" "}
                 <Services
                   name={"Vouchers"}
